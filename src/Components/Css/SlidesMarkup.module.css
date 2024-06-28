@@ -1,0 +1,51 @@
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1 0 auto;
+}
+.mySlides {
+  position: relative;
+  display: none;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  width: 320px;
+  height: 400px;
+  margin: 60px 0 0 0;
+  box-shadow:
+    12px 12px 16px 0 rgba(0, 0, 0, 0.5),
+    -12px -12px 16px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  background-color: rgb(245, 245, 245);
+}
+.mySlides > hr {
+  width: 50px;
+}
+.speaker-image-div {
+  position: absolute;
+  top: -50px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.5);
+  border: 5px solid rgb(255, 255, 255);
+}
+.speaker-image-div > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.remark {
+  margin: 100px 0 0 0;
+  text-align: center;
+  width: 200px;
+  font-weight: 600;
+  font-size: 1em;
+}
+.speaker {
+  text-align: center;
+  font-weight: 700;
+}

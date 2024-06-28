@@ -1,0 +1,18 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+}
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: url("/src/Components/Assets/Images/drimsBatch.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+  background-position: center;
+  min-height: 100vh;
+}

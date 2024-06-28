@@ -1,0 +1,159 @@
+main {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("/src/Components/Assets/Images/drimsBatch.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  flex: 1 0 auto;
+}
+main > h1:first-child {
+  margin: 12px 0 0 0;
+  padding: 0 0 10px 12px;
+}
+main h2 {
+  margin: 0 0 10px 5px;
+  display: inline-block;
+  padding: 2px 6px 2px 0;
+  border-bottom: 2px solid green;
+}
+.albums-list {
+  list-style-position: inside;
+  margin: 0 0 25px -5px;
+  font-size: 19px;
+}
+.albums-list li a,
+.albums-list li {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 1);
+  padding: 6px;
+  cursor: pointer;
+  transition: border-bottom 500ms;
+}
+.albums-list li a:hover {
+  border-bottom: 2px solid green;
+}
+.gallery {
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: 80px;
+}
+.gallery-div {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  align-content: center;
+  position: relative;
+}
+.image-container {
+  display: none;
+  width: 95vw;
+  height: 350px;
+  position: relative;
+  cursor: pointer;
+}
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.image-description {
+  text-align: center;
+  color: rgba(0, 0, 0, 1);
+  background-color: white;
+  padding: 15px;
+  margin: -5px 0 0 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-weight: 700;
+  font-size: 20px;
+  border-bottom: 7px solid #378fe4;
+}
+.image-index {
+  font-size: 16px;
+  font-weight: 700;
+  padding: 4px;
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  color: black;
+}
+.next,
+.previous {
+  position: absolute;
+  font-size: 35px;
+  background: transparent;
+  border: none;
+
+  color: hsla(235, 100%, 0%, 1);
+  bottom: 35%;
+  z-index: 1;
+}
+.next:hover,
+.previous:hover {
+  background-color: rgba(0, 0, 0, 0.49);
+}
+.previous {
+  padding: 0 4px 0 0;
+  left: 2%;
+}
+.next {
+  padding: 0 0 0 4px;
+  right: 2%;
+}
+/*===Lightbox===*/
+
+.lightbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition-duration: 900ms;
+  -webkit-transition-duration: 900ms;
+  position: fixed;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+}
+.lightbox:target {
+  top: 0;
+}
+.lightbox-content img {
+  width: 100%;
+  height: auto;
+}
+.close {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 1);
+  font-size: 20px;
+  padding: 10px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 1000;
+}
+
+/*.navigation-bar a:nth-child(4) {
+  background-color: #d14200;
+  color: rgb(255, 255, 255);
+}*/
+
+@media only screen and (min-width: 480px) {
+  .image-container {
+    width: 47vw;
+  }
+  .gallery {
+    margin: 0 0 80px 20px;
+  }
+  .gallery-div {
+    justify-content: flex-start;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .image-container {
+    width: 30vw;
+  }
+}

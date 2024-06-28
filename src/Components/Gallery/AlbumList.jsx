@@ -1,0 +1,39 @@
+const AlbumList = () => {
+  const list = [
+    {
+      name: "Administration",
+      href: "#administration"
+    },
+    {
+      name: "Graduations",
+      href: "#graduations"
+    },
+    {
+      name: "Academics",
+      href: "#academics"
+    },
+    {
+      name: "Sports",
+      href: "#sports"
+    },
+    {
+      name: "Trophy Case",
+      href: "#trophy-case"
+    }
+  ];
+  return (
+    <>
+      <ul className="albums-list">
+        {list.map((element, index) => {
+          return (
+            <li>
+              <a href={element.href}>{element.name}</a>
+            </li>
+          );
+        })}
+      </ul>
+    </>
+  );
+};
+
+export default AlbumList;

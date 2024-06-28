@@ -1,0 +1,76 @@
+* {
+  word-spacing: 3px;
+}
+
+.intro-paragraph {
+  margin: 100px 0 0 0;
+  padding: 0 10px;
+  font-weight: 500;
+}
+/*All the general styles for all the sections*/
+section {
+  padding: 0 10px;
+  font-weight: 500;
+}
+section h2,
+section h4 {
+  text-align: center;
+  margin: 6px 0;
+}
+
+section ul {
+  list-style-position: inside;
+  list-style-type: disc;
+  margin: 0 0 6px 50px;
+}
+section dl,
+dl dd {
+  margin: 0 0 0 50px;
+}
+
+table,
+td,
+thead th {
+  text-align: center;
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 10px;
+}
+.general-fees-table thead tr {
+  font-size: 1.1em;
+  font-weight: 700;
+}
+.general-fees-table thead tr:nth-child(1) td:nth-child(1) {
+  padding: 40px;
+}
+.fees-structure-section div {
+  overflow-x: scroll;
+  padding: 2px;
+}
+
+/*New Students Reqired fees table*/
+.new-students-required-fees {
+  table-layout: fixed;
+  width: 100%;
+}
+.new-students-required-fees td {
+  width: 33.3%;
+}
+.new-students-required-fees thead th {
+  font-size: 1.1em;
+  font-weight: 700;
+}
+
+/*All the h4 that are aligned left*/
+.uniform-heading,
+.entrance-schedule-heading,
+.installment-payment-heading {
+  text-align: left;
+}
+
+@media only screen and (min-width: 480px) {
+  p {
+    text-align: center;
+    margin: 0 20px;
+  }
+}
