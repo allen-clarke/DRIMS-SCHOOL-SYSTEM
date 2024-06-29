@@ -29,7 +29,7 @@ const Gallery = () => {
 
         <AlbumList />
 
-        <div className="gallery-div">
+        <div className={styles["gallery-div"]}>
           <Album
             array={administrationGallery}
             id="administration"

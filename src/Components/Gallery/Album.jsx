@@ -39,7 +39,7 @@ const Album = ({
         {array.images.map((element, index) => {
           return (
             <div
-              className={styles.imageContainer + " " + className}
+              className={styles["image-container"] + " " + className}
               iden={element.iden}
             >
               <a href={element.href}>
@@ -49,8 +49,8 @@ const Album = ({
                   className={styles.galleryImg}
                 />
               </a>
-              <p className={styles.imageIndex}>{element.imageIndex}</p>
-              <p className={styles.imageDescription}>{element.description}</p>
+              <p className={styles["image-index"]}>{element.imageIndex}</p>
+              <p className={styles["image-description"]}>{element.description}</p>
             </div>
           );
         })}
@@ -58,10 +58,10 @@ const Album = ({
         {array.lightboxes.map((element, index) => {
           return (
             <div className={styles.lightbox} id={element.iden}>
-              <a className="close" href={element.href}>
+              <a className={styles.close} href={element.href}>
                 Close
               </a>
-              <div className="lightbox-content">
+              <div className={styles["lightbox-content"]}>
                 <img src={element.source} alt={element.source} />
               </div>
             </div>

@@ -6,7 +6,7 @@ const Informations = () => {
     return (
       <>
         <main>
-          <p ClassName="intro-paragraph">
+          <p ClassName={styles["intro-paragraph"]}>
             This page contains all essential informations and updates about our
             noble institution. Informations that are here include financial and
             academic informations and other general informations.

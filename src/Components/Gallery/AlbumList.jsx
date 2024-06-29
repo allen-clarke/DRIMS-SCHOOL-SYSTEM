@@ -23,7 +23,7 @@ const AlbumList = () => {
   ];
   return (
     <>
-      <ul className="albums-list">
+      <ul className={styles["albums-list"]}>
         {list.map((element, index) => {
           return (
             <li>
