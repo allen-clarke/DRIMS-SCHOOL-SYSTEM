@@ -18,10 +18,10 @@ const Album = ({
 
   return (
     <>
-      <section className={styles.gallery} id={id}>
+      <section className={styles["gallery"]} id={id}>
         <h2>{h2}</h2>
         <button
-          className={styles.previous}
+          className={styles["previous"]}
           onClick={() => {
             displayPreviousImage(containers, index, setIndex);
           }}
@@ -29,7 +29,7 @@ const Album = ({
           {"<"}
         </button>
         <button
-          className={styles.next}
+          className={styles["next"]}
           onClick={() => {
             displayNextImage(containers, index, setIndex);
           }}
@@ -46,7 +46,7 @@ const Album = ({
                 <img
                   src={element.source}
                   alt={element.description}
-                  className={styles.galleryImg}
+                  className={styles["gallery-img"]}
                 />
               </a>
               <p className={styles["image-index"]}>{element.imageIndex}</p>
@@ -57,8 +57,8 @@ const Album = ({
 
         {array.lightboxes.map((element, index) => {
           return (
-            <div className={styles.lightbox} id={element.iden}>
-              <a className={styles.close} href={element.href}>
+            <div className={styles["lightbox"]} id={element.iden}>
+              <a className={styles["close"]} href={element.href}>
                 Close
               </a>
               <div className={styles["lightbox-content"]}>

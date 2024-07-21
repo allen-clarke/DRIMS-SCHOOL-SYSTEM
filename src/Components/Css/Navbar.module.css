@@ -31,14 +31,16 @@
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 17px;
+  font-size: 1.1em;
   color: #000;
   padding: 10px;
 }
-/*header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 2;
-}*/
+.navigation-bar a:hover {
+  background-color: #a3391c;
+  color: #fff !important;
+  border-left: 1px solid rgb(0, 103,255);
+}
+.activeLink {
+  background-color: #a3391c;
+  color: #fff !important;
+}

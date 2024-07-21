@@ -23,7 +23,7 @@ const Gallery = () => {
 
   return (
     <>
-      <main >
+      <main className={styles["main"]}>
         <h1>Tour our Gallery</h1>
         <h2 style={{ marginLeft: "25px" }}>Albums</h2>
 

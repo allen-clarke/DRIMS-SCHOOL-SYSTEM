@@ -1,7 +1,11 @@
-main {
+.main {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url("/src/Components/Assets/Images/drimsBatch.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   flex: 1 0 auto;
 }
 .mySlides {
@@ -11,9 +15,9 @@ main {
   justify-content: space-evenly;
   align-items: center;
   align-content: center;
-  width: 320px;
-  height: 400px;
-  margin: 60px 0 0 0;
+  width: /*320px;*/ 88.8%;
+  height: 88.8%;
+  margin: 60px 0 12px 0;
   box-shadow:
     12px 12px 16px 0 rgba(0, 0, 0, 0.5),
     -12px -12px 16px 0 rgba(0, 0, 0, 0.5);
@@ -21,7 +25,7 @@ main {
   background-color: rgb(245, 245, 245);
 }
 .mySlides > hr {
-  width: 50px;
+  width: 15.625%;
 }
 .speaker-image-div {
   position: absolute;
@@ -41,9 +45,9 @@ main {
 .remark {
   margin: 100px 0 0 0;
   text-align: center;
-  width: 200px;
+  width: /*200px*/ 62.5%;
   font-weight: 600;
-  font-size: 1em;
+  font-size: 1rem;
 }
 .speaker {
   text-align: center;

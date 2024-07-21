@@ -9,10 +9,5 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-image: url("/src/Components/Assets/Images/drimsBatch.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  object-fit: cover;
-  background-position: center;
   min-height: 100vh;
 }

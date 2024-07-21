@@ -1,3 +1,4 @@
+import styles from "../Css/Gallery.module.css"; 
 const AlbumList = () => {
   const list = [
     {

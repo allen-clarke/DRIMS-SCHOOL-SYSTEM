@@ -1,27 +1,46 @@
 import styles from "../Css/Informations.module.css";
 
+var alignedLeft = {
+  textAlign: "left"
+};
 export const Entrance = () => {
   const entranceDate = [
     {
-      entranceNo: "1"+<sup>st</sup>,
+      entranceNo: (
+        <>
+          1<sup>st</sup>
+        </>
+      ),
       date: "August 6, 2024 @9:00AM"
     },
     {
-      entranceNo: "2"+<sup>nd</sup>,
+      entranceNo: (
+        <>
+          2<sup>nd</sup>
+        </>
+      ),
       date: "August 13, 2024 @9:00AM"
     },
     {
-      entranceNo: "3"+<sup>rd</sup>,
+      entranceNo: (
+        <>
+          3 <sup>rd</sup>
+        </>
+      ),
       date: "August 20, 2024 @9:00AM"
     },
     {
-      entranceNo: "4"+<sup>th</sup>,
+      entranceNo: (
+        <>
+          4 <sup>th</sup>
+        </>
+      ),
       date: "August 27, 2024 @9:00AM"
     }
   ];
   return (
     <>
-      <section ClassName={styles["entrance-section"]}>
+      <section className={styles["section"]}>
         <h2>Entrance Examinations</h2>
         <p>
           There are four dates set for the entrance exams. All students wanting
@@ -30,14 +49,12 @@ export const Entrance = () => {
           the registrar.
         </p>
         <div>
-          <h4 ClassName={styles["entrance-schedule-heading"]}>
-            Entrance Schedule
-          </h4>
-          <dl ClassName={styles["entrance-date"]}>
+          <h4 style={alignedLeft}>Entrance Schedule</h4>
+          <dl className={styles["entrance-date"]}>
             {entranceDate.map(element => {
               return (
                 <>
-                  <dt>{element.entranceNo}</dt>
+                  <dt>{element.entranceNo} Entrance</dt>
                   <dd>{element.date}</dd>
                 </>
               );
@@ -62,7 +79,7 @@ export const Registration = () => {
     },
     {
       listItem:
-        "Submit all required documents &lpar;report card, transcript, and letter of recommendation&rpar; from the past school attended during the time of interview"
+        "Submit all required documents (report card, transcript, and letter of recommendation) from the past school attended during the time of interview"
     },
     {
       listItem: "Buy a set of uniform from the school for uniformity; and"
@@ -73,14 +90,14 @@ export const Registration = () => {
   ];
   return (
     <>
-      <section ClassName={styles["registration-section"]}>
+      <section className={styles["section"]}>
         <h2>Registration</h2>
         <p>
           The registration process begins on August 10, 2024 and ends August 30,
           2024. Any student registering after the stipulated dates will pay a
           late fee of $500.00LD. All students seeking admission at DRIMS School
           System must:
-          <ul ClassName={styles["requirements-list"]}>
+          <ul className={styles["requirements-list"]}>
             {requirements.map(element => (
               <li>{element.listItem}</li>
             ))}
@@ -94,7 +111,11 @@ export const Registration = () => {
 export const FeeStructure = () => {
   const generalFees = [
     {
-      grade: "K" + <sub>3</sub> + "-" + "K" + <sub>5</sub>,
+      grade: (
+        <>
+          K<sub>3</sub>-K<sub>5</sub>
+        </>
+      ),
       registration: 10000,
       firstInstallment: 10000,
       secondInstallment: 0.0,
@@ -138,22 +159,38 @@ export const FeeStructure = () => {
   ];
   const installmentDates = [
     {
-      installmentNo: "1" + <sup>st</sup>,
+      installmentNo: (
+        <>
+          1<sup>st</sup>
+        </>
+      ),
       date: "During Registration"
     },
     {
-      installmentNo: "2" + <sup>nd</sup>,
+      installmentNo: (
+        <>
+          2 <sup>nd</sup>
+        </>
+      ),
       date: "February 6, 2025"
     },
     {
-      installmentNo: "3" + <sup>rd</sup>,
+      installmentNo: (
+        <>
+          3 <sup>rd</sup>
+        </>
+      ),
       date: "May 17, 2025"
     }
   ];
 
   const newStudentRequiredFees = [
     {
-      grade: "K"+<sub>3</sub> +"- 6",
+      grade: (
+        <>
+          K<sub>3</sub> - 6
+        </>
+      ),
       cost: 40,
       purpose: "P.E Suit, Sport Day Wear and Socks"
     },
@@ -171,35 +208,35 @@ export const FeeStructure = () => {
 
   const uniform = [
     {
-      shirt: "Sky-blue shirt &lpar;short sleeves&rpar;",
+      shirt: "Sky-blue shirt (short sleeves)",
       trouser:
-        "Navy-blue trouser &lpar;short trouser from kindergarten to grade 5 and long trouser from grade 6 to grade 12&rpar;",
+        "Navy-blue trouser (short trouser from kindergarten to grade 5 and long trouser from grade 6 to grade )",
       shoe: "Black shoe or sneaker",
       socks: "Navy-blue socks",
       belt: "black belt",
 
       //Girls Uniform
-      blouse: "Sky-blue blouse &lpar;short sleeves&rpar;",
+      blouse: "Sky-blue blouse (short sleeves)",
       skirtOrJumper:
-        "Navy-blue jumper &lpar;from kindergarten to grade 9&rpar; and navy-blue skirt &lpar;from grade 10 to grade 12&rpar;",
+        "Navy-blue jumper (from kindergarten to grade 9); and navy-blue skirt (from grade 10 to grade 12)",
       femaleShoe: "Black low-heel shoe or sneaker",
       femaleSocks: "sky-blue socks"
     }
   ];
   return (
     <>
-      <section ClassName={styles["fees-structure-section"]}>
+      <section className={styles["section"]}>
         <h2>Fees Structure</h2>
         <p>
           This section contains informations about all the required fees for
           every student during this academic year.
         </p>
         <h4>Registration and Tuition fees</h4>
-        <div>
-          <table ClassName={styles["general-fees-table"]}>
+        <div style={{ overflowX: "scroll", padding: "2px" }}>
+          <table>
             <thead>
               <tr>
-                <td rowspan="2">Class</td>
+                <td rowspan="2" style={{padding: "40px"}}>Class</td>
                 <td rowspan="2">Registration ($)</td>
                 <td colspan="3">Tuition</td>
                 <td rowspan="2">Grand Total ($)</td>
@@ -229,10 +266,8 @@ export const FeeStructure = () => {
             ))}
           </table>
         </div>
-        <h4 ClassName={styles["installment-payment-heading"]}>
-          Installments Payment Dates
-        </h4>
-        <dl ClassName={styles["installment-dates"]}>
+        <h4 style={alignedLeft}>Installments Payment Dates</h4>
+        <dl className={styles["installment-dates"]}>
           {installmentDates.map(element => (
             <>
               <dt>{element.installmentNo} Installment:</dt>
@@ -245,7 +280,7 @@ export const FeeStructure = () => {
           payment.
         </p>
         <h4>New Student Requirements during Registration</h4>
-        <table ClassName={styles["new-students-required-fees"]}>
+        <table className={styles["newStudentsRequiredFees"]}>
           <thead>
             <tr>
               <th>Class</th>
@@ -261,9 +296,9 @@ export const FeeStructure = () => {
             </tr>
           ))}
         </table>
-        <h2 ClassName={styles["uniform-heading"]}>Uniforms</h2>
-        <h4 ClassName={styles["uniform-heading"]}>Boys:</h4>
-        <ul ClassName={styles["boys-uniform"]}>
+        <h2 style={alignedLeft}>Uniforms</h2>
+        <h4 style={alignedLeft}>Boys:</h4>
+        <ul className={styles["boys-uniform"]}>
           {uniform.map(element => (
             <>
               <li>{element.shirt}</li>
@@ -275,8 +310,8 @@ export const FeeStructure = () => {
           ))}
         </ul>
 
-        <h4 ClassName={styles["uniform-heading"]}>Girls:</h4>
-        <ul ClassName={styles["girls-uniform"]}>
+        <h4 style={alignedLeft}>Girls:</h4>
+        <ul className={styles["girls-uniform"]}>
           {uniform.map(element => (
             <>
               <li>{element.blouse}</li>

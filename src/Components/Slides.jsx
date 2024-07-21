@@ -41,35 +41,38 @@ function Slides() {
       setTimeout(slideShow, 5000);
     };
     slideShow();
+    return () => {
+      clearTimeout(slideShow)
+    }
   }, [slideIndex]);
 
   const SlidesMarkup = ({ speaker, speakerImage, remark }) => {
     return (
-      <main >
-        <figure className={styles.mySlides}>
-          <div className={styles["speaker-image-div"]}>
-            <img src={speakerImage} alt={speaker} />
-          </div>
-          <p className={styles.remark}>{remark}</p>
-          <hr />
-          <p className={styles.speaker}>~{speaker}</p>
-        </figure>
-      </main>
+      <figure className={styles.mySlides}>
+        <div className={styles["speaker-image-div"]}>
+          <img src={speakerImage} alt={speaker} />
+        </div>
+        <p className={styles.remark}>{remark}</p>
+        <hr />
+        <p className={styles.speaker}>~{speaker}</p>
+      </figure>
     );
   };
 
   return (
     <>
-      {slideArray.map((value, index) => {
-        return (
-          <SlidesMarkup
-            key={index}
-            speaker={value.speaker}
-            speakerImage={value.speakerImage}
-            remark={value.remark}
-          />
-        );
-      })}
+      <main className={styles["main"]}>
+        {slideArray.map((value, index) => {
+          return (
+            <SlidesMarkup
+              key={index}
+              speaker={value.speaker}
+              speakerImage={value.speakerImage}
+              remark={value.remark}
+            />
+          );
+        })}
+      </main>
     </>
   );
 }

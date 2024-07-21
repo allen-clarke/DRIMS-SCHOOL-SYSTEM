@@ -1,4 +1,4 @@
-main {
+.main {
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
     url("/src/Components/Assets/Images/drimsBatch.png");
   background-repeat: no-repeat;
@@ -7,11 +7,11 @@ main {
   color: white;
   flex: 1 0 auto;
 }
-main > h1:first-child {
+.main > h1:first-child {
   margin: 12px 0 0 0;
   padding: 0 0 10px 12px;
 }
-main h2 {
+.main h2 {
   margin: 0 0 10px 5px;
   display: inline-block;
   padding: 2px 6px 2px 0;
@@ -108,18 +108,20 @@ main h2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  transition-duration: 900ms;
-  -webkit-transition-duration: 900ms;
+  transition-duration: 500ms;
+  -webkit-transition-duration: 500ms;
   position: fixed;
-  top: -100%;
+  top: 0;
+  opacity: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
-  z-index: 1000;
+  z-index: -1;
 }
 .lightbox:target {
-  top: 0;
+  opacity: 1;
+  z-index: 1000;
 }
 .lightbox-content img {
   width: 100%;
@@ -136,17 +138,12 @@ main h2 {
   z-index: 1000;
 }
 
-/*.navigation-bar a:nth-child(4) {
-  background-color: #d14200;
-  color: rgb(255, 255, 255);
-}*/
-
 @media only screen and (min-width: 480px) {
   .image-container {
     width: 47vw;
   }
   .gallery {
-    margin: 0 0 80px 20px;
+    margin: 0 0 80px 8px;
   }
   .gallery-div {
     justify-content: flex-start;
