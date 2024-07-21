@@ -9,3 +9,5 @@ test("render the navbar", () => {
   expect(navbar).toBeInTheDocument();
   expect(schoolName).toBeInTheDocument();
 });
+
+//Powered by Captain Checkk
