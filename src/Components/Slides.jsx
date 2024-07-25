@@ -42,26 +42,44 @@ function Slides() {
     };
     slideShow();
     return () => {
-      clearTimeout(slideShow)
-    }
+      clearTimeout(slideShow);
+    };
   }, [slideIndex]);
 
   const SlidesMarkup = ({ speaker, speakerImage, remark }) => {
     return (
-      <figure className={styles.mySlides}>
-        <div className={styles["speaker-image-div"]}>
-          <img src={speakerImage} alt={speaker} />
+      <figure
+        className={
+          styles.mySlides +
+          " flex-column align-items-center align-content-center justify-content-space-evenly bg-white position-relative"
+        }
+      >
+        <div
+          className={
+            styles["speaker-image-div"] +
+            " rounded-circle position-absolute top-0 translate-middle-y"
+          }
+        >
+          <img
+            src={speakerImage}
+            alt={speaker}
+            className="rounded-circle h-100 w-100 object-fit-cover"
+          />
         </div>
-        <p className={styles.remark}>{remark}</p>
+        <p className={styles.remark + " text-center"}>{remark}</p>
         <hr />
-        <p className={styles.speaker}>~{speaker}</p>
+        <p className={styles.speaker + " text-center"}>~{speaker}</p>
       </figure>
     );
   };
 
   return (
     <>
-      <main className={styles["main"]}>
+      <main
+        className={
+          styles["main"] + " d-flex align-items-center justify-content-center"
+        }
+      >
         {slideArray.map((value, index) => {
           return (
             <SlidesMarkup

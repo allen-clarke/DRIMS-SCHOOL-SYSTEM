@@ -13,15 +13,33 @@ const Navbar = () => {
   ];
   return (
     <header>
-      <div className={styles["school-name"]}>
-        <img src={drimsBatch} alt="DRIMS SCHOOL SYSTEM batch" />
-        <p>Drims School System</p>
+      <div
+        className={
+          styles["school-name"] +
+          " d-flex flex-row align-items-center justify-content-start text-white bg-primary"
+        }
+      >
+        <img
+          className="rounded-circle"
+          src={drimsBatch}
+          alt="DRIMS SCHOOL SYSTEM batch"
+        />
+        <p className="text-uppercase">Drims School System</p>
       </div>
-      <nav className={styles["navigation-bar"]}>
+      <nav
+        className={
+          styles["navigation-bar"] +
+          " d-flex flex-row align-items-center flex-nowrap bg-white overflow-x-scroll border-bottom border-primary"
+        }
+      >
         {links.map((element, index) => (
           <Link
             key={index}
-            className={index === activeLink && styles["activeLink"]}
+            className={
+              index === activeLink
+                ? styles["activeLink"]+" text-uppercase text-decoration-none"
+                : "text-uppercase text-decoration-none text-black"
+            }
             onClick={() => setActiveLink(index)}
             to={element.to}
           >

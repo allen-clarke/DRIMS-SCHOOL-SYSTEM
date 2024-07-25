@@ -18,10 +18,10 @@ const Album = ({
 
   return (
     <>
-      <section className={styles["gallery"]} id={id}>
+      <section className={styles["gallery"]+" position-relative"} id={id}>
         <h2>{h2}</h2>
         <button
-          className={styles["previous"]}
+          className={styles["previous"] + " text-black position-absolute z-1 border border-0 bg-transparent"}
           onClick={() => {
             displayPreviousImage(containers, index, setIndex);
           }}
@@ -29,7 +29,7 @@ const Album = ({
           {"<"}
         </button>
         <button
-          className={styles["next"]}
+          className={styles["next"] + " text-black position-absolute z-1 border border-0 bg-transparent"}
           onClick={() => {
             displayNextImage(containers, index, setIndex);
           }}
@@ -39,30 +39,49 @@ const Album = ({
         {array.images.map((element, index) => {
           return (
             <div
-              className={styles["image-container"] + " " + className}
+              className={styles["image-container"] + " position-relative " + className}
               iden={element.iden}
             >
               <a href={element.href}>
                 <img
                   src={element.source}
                   alt={element.description}
-                  className={styles["gallery-img"]}
+                  className={styles["gallery-img"] + " w-100 h-100 object-fit-cover"}
                 />
               </a>
-              <p className={styles["image-index"]}>{element.imageIndex}</p>
-              <p className={styles["image-description"]}>{element.description}</p>
+              <p className={styles["image-index"] + " text-black position-absolute"}>
+                {element.imageIndex}
+              </p>
+              <p
+                className={
+                  styles["image-description"] +
+                  " text-center text-black bg-white overflow-hidden"
+                }
+              >
+                {element.description}
+              </p>
             </div>
           );
         })}
 
         {array.lightboxes.map((element, index) => {
           return (
-            <div className={styles["lightbox"]} id={element.iden}>
-              <a className={styles["close"]} href={element.href}>
+            <div
+              className={styles["lightbox"] + " d-flex flex-column w-100 h-100 position-fixed top-0 start-0 z-n1 opacity-0"}
+              id={element.iden}
+            >
+              <a
+                className={styles["close"] + " text-white text-decoration-none position-absolute z-3"}
+                href={element.href}
+              >
                 Close
               </a>
               <div className={styles["lightbox-content"]}>
-                <img src={element.source} alt={element.source} />
+                <img
+                  src={element.source}
+                  alt={element.source}
+                  className="w-100 h-auto"
+                />
               </div>
             </div>
           );

@@ -22,14 +22,14 @@ const Gallery = () => {
   const displayImage = new DisplayImage();
 
   return (
-    <>
-      <main className={styles["main"]}>
+
+      <main className={styles["main"] +" text-white"}>
         <h1>Tour our Gallery</h1>
         <h2 style={{ marginLeft: "25px" }}>Albums</h2>
 
         <AlbumList />
 
-        <div className={styles["gallery-div"]}>
+        <div className={styles["gallery-div"]+" d-flex flex-row flex-wrap align-content-center align-items-center position-relative"}>
           <Album
             array={administrationGallery}
             id="administration"
@@ -67,7 +67,6 @@ const Gallery = () => {
           />
         </div>
       </main>
-    </>
   );
 };
 

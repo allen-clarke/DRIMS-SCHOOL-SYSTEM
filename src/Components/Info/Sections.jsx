@@ -42,14 +42,14 @@ export const Entrance = () => {
     <>
       <section className={styles["section"]}>
         <h2>Entrance Examinations</h2>
-        <p>
+        <p className="text-center">
           There are four dates set for the entrance exams. All students wanting
           to attend the institution are kindly asked to take notes of the dates.
           The entrance fee is $800.00LD which should be paid at the office of
           the registrar.
         </p>
         <div>
-          <h4 style={alignedLeft}>Entrance Schedule</h4>
+          <h4>Entrance Schedule</h4>
           <dl className={styles["entrance-date"]}>
             {entranceDate.map(element => {
               return (
@@ -92,17 +92,17 @@ export const Registration = () => {
     <>
       <section className={styles["section"]}>
         <h2>Registration</h2>
-        <p>
+        <p className="text-center">
           The registration process begins on August 10, 2024 and ends August 30,
           2024. Any student registering after the stipulated dates will pay a
           late fee of $500.00LD. All students seeking admission at DRIMS School
           System must:
-          <ul className={styles["requirements-list"]}>
-            {requirements.map(element => (
-              <li>{element.listItem}</li>
-            ))}
-          </ul>
         </p>
+        <ul className={styles["requirements-list"]}>
+          {requirements.map(element => (
+            <li>{element.listItem}</li>
+          ))}
+        </ul>
       </section>
     </>
   );
@@ -227,7 +227,7 @@ export const FeeStructure = () => {
     <>
       <section className={styles["section"]}>
         <h2>Fees Structure</h2>
-        <p>
+        <p className="text-center">
           This section contains informations about all the required fees for
           every student during this academic year.
         </p>
@@ -236,7 +236,9 @@ export const FeeStructure = () => {
           <table>
             <thead>
               <tr>
-                <td rowspan="2" style={{padding: "40px"}}>Class</td>
+                <td rowspan="2" style={{ padding: "40px" }}>
+                  Class
+                </td>
                 <td rowspan="2">Registration ($)</td>
                 <td colspan="3">Tuition</td>
                 <td rowspan="2">Grand Total ($)</td>
@@ -266,7 +268,7 @@ export const FeeStructure = () => {
             ))}
           </table>
         </div>
-        <h4 style={alignedLeft}>Installments Payment Dates</h4>
+        <h4>Installments Payment Dates</h4>
         <dl className={styles["installment-dates"]}>
           {installmentDates.map(element => (
             <>
@@ -296,7 +298,7 @@ export const FeeStructure = () => {
             </tr>
           ))}
         </table>
-        <h2 style={alignedLeft}>Uniforms</h2>
+        <h2>Uniforms</h2>
         <h4 style={alignedLeft}>Boys:</h4>
         <ul className={styles["boys-uniform"]}>
           {uniform.map(element => (

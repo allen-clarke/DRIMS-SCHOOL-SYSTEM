@@ -28,7 +28,7 @@ const AlbumList = () => {
         {list.map((element, index) => {
           return (
             <li>
-              <a href={element.href}>{element.name}</a>
+              <a className="text-white text-decoration-none" href={element.href}>{element.name}</a>
             </li>
           );
         })}
